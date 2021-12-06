@@ -1,0 +1,13 @@
+Cart Count: {{ cartService.cartItems.length }}
+<button (click)="navigateToCart()">Go to CART</button>
+<div *ngFor="let p of productService.products">
+  <div style="padding: 4px; margin-bottom: 4px; border: solid blue;">
+    <div *ngIf="navigation.userType == 'ADMIN'">
+      <button (click)="deleteProduct(p)">Delete product</button>
+    </div>
+    <div>{{ p.pName }}</div>
+    <div>{{ p.quantity }}</div>
+    <button (click)="addToCart(p)">Add to cart</button>
+  </div>
+</div>
+<router-outlet></router-outlet>

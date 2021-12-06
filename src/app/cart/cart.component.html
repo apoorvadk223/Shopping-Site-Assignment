@@ -1,0 +1,7 @@
+<div *ngFor="let p of cartService.cartItems">
+  <div style="padding: 4px; margin-bottom: 4px; border: solid blue;">
+    <div>{{ p.pName }}</div>
+    <div>{{ p.quantity }}</div>
+  </div>
+</div>
+<button (click)="checkout()">Proceed to checkout</button>
